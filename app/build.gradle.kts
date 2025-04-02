@@ -56,7 +56,7 @@ android {
         }
     }
 
-    signingConfigs {
+/*    signingConfigs {
         if (!hasProperty("github") && !hasProperty("fdroid")) {
             create("release") {
                 storeFile = file(localProperties.getProperty("release.jks.file", ""))
@@ -67,7 +67,7 @@ android {
                 enableV4Signing = true
             }
         }
-    }
+    }*/
 
     buildTypes {
         getByName("debug") {
@@ -76,7 +76,7 @@ android {
             isDebuggable = true
         }
 
-        getByName("release") {
+/*        getByName("release") {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
@@ -90,7 +90,7 @@ android {
 
         create("alpha") {
             initWith(getByName("release"))
-        }
+        }*/
     }
 
     flavorDimensions += "feature"
@@ -152,7 +152,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "11"
     }
 
     buildFeatures {
@@ -178,7 +178,7 @@ android {
 
     kotlin {
         jvmToolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
+            languageVersion.set(JavaLanguageVersion.of(11))
         }
 
         this.sourceSets {

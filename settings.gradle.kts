@@ -17,7 +17,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WallFlow"
+rootProject.name = "WallFlowH"
 
 include(":app")
 include(":benchmarks")
